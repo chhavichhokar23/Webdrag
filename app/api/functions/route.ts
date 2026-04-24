@@ -48,7 +48,7 @@ export async function GET() {
 }
 
 // ── POST — save or update a function in the file
-export async function POST(req) {
+export async function POST(req: Request) {
   try {
     const { name, code } = await req.json()
 
@@ -105,7 +105,7 @@ ${indentedCode}
 }
 
 // ── DELETE — remove a function from the file
-export async function DELETE(req) {
+export async function DELETE(req: Request) {
   try {
     const { name } = await req.json()
 
