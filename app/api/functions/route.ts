@@ -43,7 +43,7 @@ export async function GET() {
     return Response.json(functions)
 
   } catch (err) {
-    return Response.json({ error: err.message }, { status: 500 })
+    return Response.json({ error: err instanceof Error ? err.message : String(err) }, { status: 500 })
   }
 }
 
@@ -100,7 +100,7 @@ ${indentedCode}
     return Response.json({ ok: true })
 
   } catch (err) {
-    return Response.json({ error: err.message }, { status: 500 })
+    return Response.json({ error: err instanceof Error ? err.message : String(err) }, { status: 500 })
   }
 }
 
@@ -122,6 +122,6 @@ export async function DELETE(req) {
     return Response.json({ ok: true })
 
   } catch (err) {
-    return Response.json({ error: err.message }, { status: 500 })
+    return Response.json({ error: err instanceof Error ? err.message : String(err) }, { status: 500 })
   }
 }
