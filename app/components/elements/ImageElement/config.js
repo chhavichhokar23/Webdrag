@@ -1,0 +1,30 @@
+export const imageConfig = {
+  defaultProps: {
+    width: 200,
+    height: 150,
+    src: "https://placehold.co/200x150",
+    alt: "Image",
+    objectFit: "cover",
+    borderWidth: 0,
+    borderStyle: "solid",
+    borderColor: "#d1d5db",
+    borderRadius: 0,
+    opacity: 100,
+    boxShadow: "none",
+    padding: 0,
+  },
+  properties: [
+    { key: "src",         label: "Image URL",   type: "text",   group: "content" },
+    { key: "alt",         label: "Alt Text",    type: "text",   group: "content" },
+    { key: "objectFit",   label: "Object Fit",  type: "select", group: "content", options: ["cover", "contain", "fill", "none", "scale-down"] },
+    { key: "width",       label: "Width",       type: "number", group: "layout"  },
+    { key: "height",      label: "Height",      type: "number", group: "layout"  },
+    { key: "padding",     label: "Padding",     type: "number", group: "layout"  },
+    { key: "borderWidth", label: "Width",       type: "number", group: "border"  },
+    { key: "borderStyle", label: "Style",       type: "select", group: "border",  options: ["solid", "dashed", "dotted", "none"] },
+    { key: "borderColor", label: "Color",       type: "color",  group: "border"  },
+    { key: "borderRadius",label: "Radius",      type: "number", group: "border"  },
+    { key: "opacity",     label: "Opacity",     type: "number", group: "effects" },
+    { key: "boxShadow",   label: "Shadow",      type: "select", group: "effects", options: ["none", "sm", "md", "lg", "xl"] },
+  ]
+}

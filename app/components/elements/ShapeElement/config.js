@@ -1,0 +1,30 @@
+export const shapeConfig = {
+  defaultProps: {
+    width: 80,
+    height: 80,
+    shape: "rectangle",
+    color: "#3b82f6",
+    strokeColor: "#1d4ed8",
+    strokeWidth: 0,
+    shapeRadius: 4,
+    backgroundColor: "transparent",
+    borderRadius: 0,
+    padding: 8,
+    opacity: 100,
+    boxShadow: "none",
+  },
+  properties: [
+    { key: "shape",           label: "Shape",           type: "select", group: "content",    options: ["rectangle", "circle", "triangle", "diamond", "star", "pentagon"] },
+    { key: "color",           label: "Fill Color",      type: "color",  group: "content"    },
+    { key: "strokeColor",     label: "Stroke Color",    type: "color",  group: "content"    },
+    { key: "strokeWidth",     label: "Stroke Width",    type: "number", group: "content"    },
+    { key: "shapeRadius",     label: "Corner Radius",   type: "number", group: "content"    },
+    { key: "width",           label: "Width",           type: "number", group: "layout"     },
+    { key: "height",          label: "Height",          type: "number", group: "layout"     },
+    { key: "padding",         label: "Padding",         type: "number", group: "layout"     },
+    { key: "backgroundColor", label: "Background",      type: "color",  group: "background" },
+    { key: "borderRadius",    label: "Box Radius",      type: "number", group: "border"     },
+    { key: "opacity",         label: "Opacity",         type: "number", group: "effects"    },
+    { key: "boxShadow",       label: "Shadow",          type: "select", group: "effects",    options: ["none", "sm", "md", "lg", "xl"] },
+  ]
+}
